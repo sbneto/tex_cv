@@ -1,0 +1,212 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage[hyphens]{url}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{ % allow url breaks in any character - after \url
+\do\/\do\a\do\b\do\c\do\d\do\e\do\f
+\do\g\do\h\do\i\do\j\do\k\do\l\do\m
+\do\n\do\o\do\p\do\q\do\r\do\s\do\t
+\do\u\do\v\do\w\do\x\do\y\do\z
+\do\A\do\B\do\C\do\D\do\E\do\F\do\G
+\do\H\do\I\do\J\do\K\do\L\do\M\do\N
+\do\O\do\P\do\Q\do\R\do\S\do\T\do\U
+\do\V\do\W\do\X\do\Y\do\Z}
+\makeatother
+\usepackage[backend=biber,style=ieee,sorting=ynt]{biblatex} % used to sort publications
+\addbibresource{publications.bib}
+\usepackage[breaklinks]{hyperref}
+\usepackage{color}
+\definecolor{linkcolour}{rgb}{0,0,0.7}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\usepackage{titlesec} % Customizing sections
+\titleformat{\section}{\Large\scshape\raggedright}{}{0pt}{}[\titlerule] 
+\titlespacing{\section}{0pt}{8pt}{3pt} % Right shift, top spacing, bottom spacing
+\usepackage{datetime}
+\newdateformat{currmonth}{\monthname[\THEMONTH], \THEYEAR}
+\usepackage{tabularx}
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+\newcolumntype{D}{>{\flushright\scshape}m{3.5cm}}
+\newcolumntype{L}{>{\scshape}r}
+\newcolumntype{R}{X}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\huge \scshape Samuel Martins Barbosa Neto
+\end{center}
+\bigskip
+
+\begin{flushright}
+\currmonth\today
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{personal}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-------------------
+
+\section{Education}
+
+\begin{tabularx}{\textwidth}{D|R}
+\emph{Ongoing}              & Computer Science Ph.D. \\
+\textsc{Jan 2015}           & Cornell University, Ithaca, NY, USA\\
+                            & \footnotesize Foreign advisor: Dan Cosley\\
+                            & \footnotesize Year abroad as a non-degree student.\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+\emph{Ongoing}              & Computer Science Ph.D. \\
+\textsc{Jun 2011}           & Universidade de São Paulo, USP, São Paulo, Brasil\\
+                            & \footnotesize Advisor: Roberto Marcondes Cesar Junior\\
+                            & \footnotesize Co-advisor: Claudio Santos Pinhanez\\
+                            & \footnotesize Thesis: User behavior modeling in social media networks\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+\textsc{Aug 2009--Jun 2011}  & Computer Engineering BSc\\
+                            & Universidade Estadual de Campinas, UNICAMP, Campinas, Brasil\\
+                            & \footnotesize Graduated with distinction, GPA 8.699 (out of 10)\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+\textsc{Feb 2005--Aug 2009}  & Computational and Applied Maths BSc\\
+                            & Universidade Estadual de Campinas, UNICAMP, Campinas, Brasil\\
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Work Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Work Experience}
+
+\begin{tabularx}{\textwidth}{D|R}
+Jun 2014--Dec 2014    & GetNinjas\\
+                    & \footnotesize External consultant for development of machine learning\\
+                    & \footnotesize and distribution algorithms.\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+%------------------------------------------------
+Jun 2012--Jun 2014   & IBM Research Brazil\\
+                    & \footnotesize Ph.D. Intern.\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+%------------------------------------------------------------------------
+Agu 2013--Dec 2013   & Programa de Aperfeiçoamento de Ensino, PAE, USP\\
+                    & \footnotesize Introduction to Computer Programming Teacher’s Assitant.\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+%------------------------------------------------------------------------
+Aug 2011--Jun 2012   & Daimon Systems and Engineering\\
+                    & \footnotesize Model and software developer for energy distribution systems.\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+%------------------------------------------------------------------------
+Feb 2011--Jul 2011   & Programa de Apoio Didático, PAD, UNICAMP\\
+                    & \footnotesize Basic Math Teacher’s Assitant.\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+%------------------------------------------------------------------------
+Agu 2010--Dec 2010   & Programa de Apoio Didático, PAD, UNICAMP\\
+                    & \footnotesize Numeric Calculus Teacher’s Assitant.\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+%------------------------------------------------------------------------
+Feb 2010--Jul 2010   & Programa de Apoio Didático, PAD, UNICAMP\\
+                    & \footnotesize Numeric Calculus Teacher’s Assitant.\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+%------------------------------------------------------------------------
+Agu 2009--Dec 2009   & Programa de Apoio Didático, PAD, UNICAMP\\
+                    & \footnotesize Linear Programming Teacher’s Assitant.\\
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Publications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nocite{*}
+\printbibliography[title={Publications}]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Scholarships
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Media}
+
+\begin{tabularx}{\textwidth}{D|R}
+Jun 2013        & \footnotesize \url{http://exame.abril.com.br/tecnologia/noticias/cientistas-desenvolvem-simulador-de-midias-sociais}\\
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Scholarships
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Scholarships}
+
+\begin{tabularx}{\textwidth}{D|R}
+Jun 2012--Present    & Graduate Research Scholarship from CAPES\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+Jun 2012--Dec 2014   & Graduate Research Scholarship from CAPES\\
+                    & \footnotesize Interrupted due to the year abroad.\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+2008--2009   & Undergraduate Research Scholarship from PIBIC/CNPq\\
+            & \footnotesize Heuristic methods for integer linear programming.\\
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Languages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Languages}
+
+\begin{tabularx}{\textwidth}{D|R}
+\textsc{Portuguese} & Mothertongue\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|R}
+\textsc{English}    & Fluent\\
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Skills
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Computer Skills}
+
+\newcolumntype{S}{>{\scshape}l}
+
+\begin{tabularx}{\textwidth}{D|S}
+Main Programming Languages  & Python, Java, C/C++\\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{D|S}
+Minor projects developed in & SQL, Lisp, Prolog, Cobol, R, Assembly x86,\\
+                            & JavaScript, ShellScript, SmallTalk, Matlab\\
+\end{tabularx}
+
+\end{document}

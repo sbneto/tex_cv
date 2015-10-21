@@ -1,0 +1,14 @@
+*.tps
+*.log
+*.synctex
+*.ps
+*.blg
+*.dvi
+*.bbl
+*.aux
+*.orig
+*.bcf
+*.out
+*.xml
+*.pdf
+personal.tex
